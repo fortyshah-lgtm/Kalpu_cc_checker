@@ -10,10 +10,10 @@ import re
 from datetime import datetime, timedelta
 
 API_ID = 32689810
-API_HASH = aa31be4386448a31db3dace0292626cf
-BOT_TOKEN = 8742156822:AAGCHv0dPWdL1frd8fFiB0zAFs3LCW0z104
-ADMIN_ID = 8765309015
-CHECKER_API_URL = https://afuonashopi.up.railway.app/shopify_parallel?site=xxx&ccxxx=&proxy=xxx 'http://afuonashopi.up.railway.app//shopify_parallel'
+API_HASH = "aa31be4386448a31db3dace0292626cf"
+BOT_TOKEN = "8742156822:AAGCHv0dPWdL1frd8fFiB0zAFs3LCW0z104"
+ADMIN_ID = [8765309015]
+CHECKER_API_URL = "http://afuonashopi.up.railway.app/shopify_parallel"
 
 
 
@@ -434,10 +434,6 @@ async def check_card_with_retry(card, sites, proxies, max_retries=20):
     if not sites:
         return {'status': 'Dead', 'message': 'No sites available', 'card': card, 'gateway': 'Unknown', 'price': '-', 'price_value': 0}
     if not proxies:
-return {
-    'status': 'Dead',
-    'message': 'No proxies available',
-    'card': card,
-    'gateway': 'Unknown',
-    'price': ''
-}
+        return {'status': 'Dead', 'message': 'No proxies available', 'card': card, 'gateway': 'Unknown', 'price': '-', 'price_value': 0}
+    for attempt in range(max_retries):
+        site
