@@ -434,4 +434,10 @@ async def check_card_with_retry(card, sites, proxies, max_retries=20):
     if not sites:
         return {'status': 'Dead', 'message': 'No sites available', 'card': card, 'gateway': 'Unknown', 'price': '-', 'price_value': 0}
     if not proxies:
-        return {'status': 'Dead', 'message': 'No proxies available', 'card': card, 'gateway': 'Unknown', 'price': '
+return {
+    'status': 'Dead',
+    'message': 'No proxies available',
+    'card': card,
+    'gateway': 'Unknown',
+    'price': ''
+}
